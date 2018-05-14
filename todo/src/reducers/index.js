@@ -12,7 +12,8 @@ const saveData = (array) => {
 }
 
 const retrieveData = () => {
-    return initialArray = JSON.parse(localStorage.getItem('array'));
+    initialArray = JSON.parse(localStorage.getItem('array'));
+    return initialArray === null ? [] : initialArray;
 }
 
 export default (todos = retrieveData(), action) => { // Initialize the state 'todos'
